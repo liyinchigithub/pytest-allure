@@ -6,18 +6,22 @@
 [![python](https://img.shields.io/badge/python-3.7-green.svg)](https://www.python.org/downloads/release/python-374/) [![pip](https://img.shields.io/badge/pip-22.0.4-yellow.svg)](https://pip.pypa.io/en/stable/)[![selenium](https://img.shields.io/badge/selenium-v4.1.0-blue.svg)](https://pypi.org/project/selenium/)
 
 # 目录说明
--src                    代码
---package               顶包
----module               模块（package包下的模块）
-----__init__.py         模块初始化
-----test_selenium.py    模块
--download_file          下载文件存放路径，通过chromeOptions capability设置
--save_images            webdriver 截图保存图片路径
--webdriver_init.py      webdriver 初始化(本地、远程、chromeoptions参数配置)
--logging_init.py        logging 初始化(日志初始化配置，每次触发写入本地文件和控制台)
--report                 allure生成json、html报告存放位置
--pytest.ini             pytest单元测试框架配置文件
--requirements.txt       依赖
+* -src                    代码
+* --package               顶包
+* ---module               模块（package包下的模块）
+* ----__init__.py         模块初始化
+* ----test_selenium.py    模块
+* -download_file          下载文件存放路径，通过chromeOptions capability设置
+* -save_images            webdriver 截图保存图片路径
+* -webdriver_init.py      webdriver 初始化(本地、远程、chromeoptions参数配置)
+* -logging_init.py        logging 初始化(日志初始化配置，每次触发写入本地文件和控制台)
+* -report                 allure生成json、html报告存放位置
+* -pytest.ini             pytest单元测试框架配置文件
+* -requirements.txt       依赖
+
+<img width="1424" alt="image" src="https://user-images.githubusercontent.com/19643260/158414247-d78e87b9-f9e4-437b-9ea1-5fd122e5c38a.png">
+
+<img width="1432" alt="image" src="https://user-images.githubusercontent.com/19643260/158414201-6d963efc-eb8b-45c2-a03d-a8dde6d15820.png">
 
 ## 更新pip
 
