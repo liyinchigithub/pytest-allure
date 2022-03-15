@@ -129,6 +129,7 @@ allure generate ./report -o ./report/html --clean
 ```shell
 allure open report/html
 ```
+<img width="805" alt="image" src="https://user-images.githubusercontent.com/19643260/158414903-ca505fb5-1701-45f7-8fd7-b1ba5e7b8c8e.png">
 
 
 ## 参考
