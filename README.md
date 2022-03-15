@@ -97,6 +97,7 @@ pytest -v
 ```shell
  cd ~
  vim .bash_profile 
+ source .bash_profile 
 ```
 * 加入内容
 ```
