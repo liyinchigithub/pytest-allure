@@ -19,10 +19,45 @@
 -pytest.ini             pytest单元测试框架配置文件
 -requirements.txt       依赖
 
-## 安装依赖
+## 更新pip
+
+```python
+pip install --upgrade pip
+```
+
+## 创建虚拟目录
 
 ```shell
-pip install requirement.txt
+# python -m venv 虚拟环境名称，名称是随意起的
+python -m venv tutorial-env
+```
+
+## 激活虚拟环境
+
+* 当激活虚拟环境时命令行上会有个虚拟环境名前缀
+
+#### Unix或MacOS上激活虚拟环境
+```shell
+source tutorial-env/bin/activate
+```
+#### windows上激活虚拟环境
+```shell
+tutorial-env\Scripts\activate.bat
+```
+
+### 项目依赖安装
+```shell
+python3.7 -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+* 如果引入其他新的依赖，可以执行冻结第三方库，就是将所有第三方库及版本号保存到requirements.txt文本文件中
+```shell
+pip freeze > requirements.txt
+```
+* 如果pip不起作用，可以从pypi上下载最新的源码包(https://pypi.python.org/pypi/)进行安装：
+```shell
+python setup.py install 
 ```
 
 ## 运行所有用例脚本
@@ -54,11 +89,19 @@ pytest -v
 
 ## 【mac、linux】
 
+* 编辑配置文件
 ```shell
  cd ~
  vim .bash_profile 
- export ALLURE_HOME=/Users/liyinchi/workspace/python/python-allure/allure-2.17.2/
- export PATH=$PATH:ALLURE_HOME/bin
+```
+* 加入内容
+```
+# allure report
+PATH="/Users/liyinchi/workspace/python/allure-2.17.2/bin:${PATH}"
+export PATH
+```
+* 检查是否
+```
  allure --version
 ```
 <img width="573" alt="image" src="https://user-images.githubusercontent.com/19643260/158354024-69672ffc-2d11-4625-90b2-dd68efc196ab.png">
@@ -75,7 +118,12 @@ pytest -s -q --alluredir ./report
 
 ### 执行命令（生成html报告）
 ```shell
-allure generate ./report -o ./report/html
+allure generate ./report -o ./report/html --clean
+```
+
+### 查看报告
+```shell
+allure open report/html
 ```
 
 

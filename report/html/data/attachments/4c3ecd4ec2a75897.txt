@@ -1,0 +1,4 @@
+[32mINFO    [0m logging_init:test_selenium.py:135 <bound method WebDriver.get_screenshot_as_png of <selenium.webdriver.chrome.webdriver.WebDriver (session="937962bae63eb477e2a5df3f367f6809")>>
+[32mINFO    [0m logging_init:test_selenium.py:166 保存成功
+[32mINFO    [0m logging_init:test_selenium.py:138 测试数据为http://www.bing.com
+[32mINFO    [0m logging_init:test_selenium.py:139 测试数据为必应搜索

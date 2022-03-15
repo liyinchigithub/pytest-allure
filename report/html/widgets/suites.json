@@ -1,15 +1,15 @@
 {
   "total" : 1,
   "items" : [ {
-    "uid" : "677e7ba47d76faac7a6dbb7fd0832aaf",
-    "name" : "test_selenium",
+    "uid" : "ce1da60478ea4edf4adbb27501244b15",
+    "name" : "src.package.module",
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 1,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 2,
       "unknown" : 0,
-      "total" : 2
+      "total" : 3
     }
   } ]
 }

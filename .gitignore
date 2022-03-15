@@ -32,3 +32,4 @@ HELP.md
 ./history
 __pycache__
 .pytest_cache
+tutorial-env

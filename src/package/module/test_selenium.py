@@ -5,22 +5,25 @@
 # https://selenium-python-zh.readthedocs.io/en/latest/
 # https://selenium-python-zh.readthedocs.io/en/latest/locating-elements.html
 
-import requests # http客户端模块
-import time # 日期时间模块
-import pytest # 单元测试模块
+# from msilib.schema import Class
+import requests  # http客户端模块
+import time  # 日期时间模块
+import pytest  # 单元测试模块
 from selenium import webdriver
+import allure
 # from webdriver_init import * # 导入封装selenium初始化自定义模块
 # from logging_init import * # 导入封装logging初始化自定义模块
-import logging # 日志模块
-import pytesseract # 验证码识别
+import logging  # 日志模块
+import pytesseract  # 验证码识别
 import json
 import webdriver_init
 import logging_init
-T=time.strftime("%Y-%m-%d %X")
+now_time = time.strftime("%Y-%m-%d %X")
 # 初始化
-driver=webdriver_init.DriverConfig.driver_config(webdriver)
+driver = webdriver_init.DriverConfig.driver_config(webdriver)
 # 初始化
-logger=logging_init.LoggingConfig(logging,"./log/{}.txt".format(T)).logging_config()
+logger = logging_init.LoggingConfig(
+    logging, "./log/{}.txt".format(now_time)).logging_config()
 
 '''
     [By类-可用属性]
@@ -56,90 +59,112 @@ logger=logging_init.LoggingConfig(logging,"./log/{}.txt".format(T)).logging_conf
 
 # 每个模块（文件）之前执行
 def setup_module():
-    logger.info("teardown_module():每个模块（文件）之前执行")
-
-# 每个类之前执行
-def setup_class():
-    logger.info("setup_class():每个类之前执行")
-
-# 每个类之后执行
-def teardown_class():
-    logger.info("teardown_class():每个类之后执行")
-
-# 每个方法之前执行
-def setup_function():
-    logger.info("setup_function():非类中的方法，每个方法之前执行")
-
-# 每个方法之后执行
-def teardown_function():
-    logger.info("teardown_function():非类中的方法，每个方法之后执行")
-
-# 类中的方法，每个方法之前执行
-def setup_method():
-    logger.info("setup_method():类中的方法，每个方法之前执行")
-
-# 类中的方法，每个方法之后执行
-def teardown_method():
-    logger.info("teardown_method():类中的方法，每个方法之后执行")
+    logger.info("setup_module():每个模块（文件）之前执行")
 
 # 每个模块（文件）之后执行
+
+
 def teardown_module():
     driver.close()
     logger.info("teardown_module():每个模块（文件）之后执行")
 
-# 参数化数据
-data = [("http://www.baidu.com", "百度搜索"), ("http://www.bing.com", "必应搜索")]
-'''
-    DDT 数据驱动（参数化）
-'''
-@pytest.mark.parametrize("url,search_text", data)
-def test_baidu_search(url, search_text):
-    driver.maximize_window()
-    driver.get(url)
-    try:
-        if("baidu" in url):
-            driver.find_element_by_id("kw").send_keys(search_text)
-            driver.find_element_by_id('su').click()
-        elif("bing" in url):
-            driver.find_element_by_id("sb_form_q").send_keys("python")
-            driver.find_element_by_id('search_icon').click()
-    except(ValueError):
-        print(ValueError)
-    time.sleep(10)
-    # 截图-输出控制台
-    file = driver.get_screenshot_as_png
-    logger.info(file)
-    # 截图-保存本地
-    save_screenshot()
-    logger.info("测试数据为{}".format(url))
-    logger.info("测试数据为{}".format(search_text))
+# 每个类之前执行
 
 
-'''
-    跳过的测试用例c
-'''
-@pytest.mark.skip
-@pytest.mark.smoke
-def test_bing_search():
-    driver.maximize_window()
-    url = "http://www.bing.com"
-    driver.get(url)
-    driver.find_element_by_id("sb_form_q").send_keys("python")
-    driver.find_element_by_id('search_icon').click()
-    time.sleep(2)
-    # 截图-输出控制台
-    file = driver.get_screenshot_as_png
-    logger.info(file)
-    # 截图-保存本地
-    save_screenshot()
+def setup_class():
+    logger.info("setup_class():每个类之前执行")
+
+# 每个类之后执行
 
 
-'''
-    selenium 截图保存本地
-'''
-def save_screenshot():
-    now_time = time.strftime('%Y-%m-%d %H:%M:%S')
-    if driver.get_screenshot_as_file('./save_images/%s.png' % now_time):
-        logger.info('保存成功')
-    else:
-        logger.info('保存失败')
+def teardown_class():
+    logger.info("teardown_class():每个类之后执行")
+
+# 每个方法之前执行
+
+
+def setup_function():
+    logger.info("setup_function():非类中的方法，每个方法之前执行")
+
+# 每个方法之后执行
+
+
+def teardown_function():
+    logger.info("teardown_function():非类中的方法，每个方法之后执行")
+
+# 类中的方法，每个方法之前执行
+
+
+def setup_method():
+    logger.info("setup_method():类中的方法，每个方法之前执行")
+
+# 类中的方法，每个方法之后执行
+
+
+def teardown_method():
+    logger.info("teardown_method():类中的方法，每个方法之后执行")
+
+@allure.feature("测试场景1")
+class Test_01():
+    '''
+        DDT 数据驱动（参数化）
+    '''
+    # 参数化数据
+    data = [("http://www.baidu.com", "百度搜索"), ("http://www.bing.com", "必应搜索")]
+    @pytest.mark.parametrize("url,search_text", data)
+    @pytest.mark.L1
+    @pytest.mark.test
+    @allure.story("测试用例1-1")# 标记测试用例
+    @allure.severity("trivial")# 标记测试用例等级
+    @allure.description("描述用例信息")
+    def test_baidu_search(self, url, search_text):
+        driver.maximize_window()
+        driver.get(url)
+        try:
+            if("baidu" in url):
+                driver.find_element_by_id("kw").send_keys(search_text)
+                driver.find_element_by_id('su').click()
+            elif("bing" in url):
+                driver.find_element_by_id("sb_form_q").send_keys("python")
+                driver.find_element_by_id('search_icon').click()
+        except(ValueError):
+            print(ValueError)
+        time.sleep(10)
+        # 截图-输出控制台
+        file = driver.get_screenshot_as_png
+        logger.info(file)
+        # 截图-保存本地
+        self.save_screenshot()
+        logger.info("测试数据为{}".format(url))
+        logger.info("测试数据为{}".format(search_text))
+
+    '''
+        跳过的测试用例c
+    '''
+    @pytest.mark.skip
+    @pytest.mark.smoke
+    def test_bing_search(self):
+        driver.maximize_window()
+        url = "http://www.bing.com"
+        driver.get(url)
+        driver.find_element_by_id("sb_form_q").send_keys("python")
+        driver.find_element_by_id('search_icon').click()
+        time.sleep(2)
+        # 截图-输出控制台
+        file = driver.get_screenshot_as_png
+        logger.info(file)
+        # 截图-保存本地
+        self.save_screenshot()
+
+    '''
+        selenium 截图保存本地
+    '''
+
+    def save_screenshot(self):
+        now_time = time.strftime('%Y-%m-%d %H:%M:%S')
+        if driver.get_screenshot_as_file('./save_images/%s.png' % now_time):
+            logger.info('保存成功')
+        else:
+            logger.info('保存失败')
+if __name__ == '__main__':
+    pytest.main(['-s','-q','--alluredir','./report/'])
