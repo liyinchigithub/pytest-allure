@@ -57,10 +57,11 @@ pytest -v
 ```shell
  cd ~
  vim .bash_profile 
- export ALLURE_HOME=/Users/liyinchi/workspace/python/python-learning/allure-2.17.2/
+ export ALLURE_HOME=/Users/liyinchi/workspace/python/python-allure/allure-2.17.2/
  export PATH=$PATH:ALLURE_HOME/bin
  allure --version
 ```
+<img width="573" alt="image" src="https://user-images.githubusercontent.com/19643260/158354024-69672ffc-2d11-4625-90b2-dd68efc196ab.png">
 
 ## 运行命令生成allure测试报告
 
