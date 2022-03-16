@@ -1,6 +1,5 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
-  "name" : "suites",
   "children" : [ {
     "name" : "src.package.module",
     "children" : [ {
@@ -9,54 +8,54 @@
         "name" : "Test_01",
         "children" : [ {
           "name" : "test_baidu_search[http://www.baidu.com-百度搜索]",
-          "uid" : "241a74638d3184e9",
+          "uid" : "ac48a59f44a4dd71",
           "parentUid" : "02d329cabe165791cc218ae8297edcdc",
           "status" : "passed",
           "time" : {
-            "start" : 1647357594214,
-            "stop" : 1647357607742,
-            "duration" : 13528
+            "start" : 1647435517188,
+            "stop" : 1647435532901,
+            "duration" : 15713
           },
           "flaky" : false,
           "newFailed" : false,
           "newPassed" : false,
           "newBroken" : false,
-          "retriesCount" : 0,
+          "retriesCount" : 1,
           "retriesStatusChange" : false,
           "parameters" : [ "'百度搜索'", "'http://www.baidu.com'" ]
         }, {
           "name" : "test_baidu_search[http://www.bing.com-必应搜索]",
-          "uid" : "b016a127bef1ee98",
+          "uid" : "7c4014cafad4f03d",
           "parentUid" : "02d329cabe165791cc218ae8297edcdc",
           "status" : "passed",
           "time" : {
-            "start" : 1647357607747,
-            "stop" : 1647357620011,
-            "duration" : 12264
+            "start" : 1647435532908,
+            "stop" : 1647435548257,
+            "duration" : 15349
           },
           "flaky" : false,
           "newFailed" : false,
           "newPassed" : false,
           "newBroken" : false,
-          "retriesCount" : 0,
+          "retriesCount" : 1,
           "retriesStatusChange" : false,
           "parameters" : [ "'必应搜索'", "'http://www.bing.com'" ]
         }, {
           "name" : "test_bing_search",
-          "uid" : "d2339b86f8b934d7",
+          "uid" : "34702196d92d75c1",
           "parentUid" : "02d329cabe165791cc218ae8297edcdc",
-          "status" : "skipped",
+          "status" : "passed",
           "time" : {
-            "start" : 1647357620014,
-            "stop" : 1647357620015,
-            "duration" : 1
+            "start" : 1647435548262,
+            "stop" : 1647435552120,
+            "duration" : 3858
           },
           "flaky" : false,
           "newFailed" : false,
           "newPassed" : false,
           "newBroken" : false,
-          "retriesCount" : 0,
-          "retriesStatusChange" : false,
+          "retriesCount" : 1,
+          "retriesStatusChange" : true,
           "parameters" : [ ]
         } ],
         "uid" : "02d329cabe165791cc218ae8297edcdc"
@@ -64,5 +63,6 @@
       "uid" : "f59dfdd0386bd4f2fc999fce9161eddc"
     } ],
     "uid" : "ce1da60478ea4edf4adbb27501244b15"
-  } ]
+  } ],
+  "name" : "suites"
 }

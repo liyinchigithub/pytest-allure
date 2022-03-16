@@ -1,0 +1,2 @@
+[32mINFO    [0m logging_init:test_selenium.py:158 <bound method WebDriver.get_screenshot_as_png of <selenium.webdriver.chrome.webdriver.WebDriver (session="5d759d0add32a455429e81e3aa1b1137")>>
+[32mINFO    [0m logging_init:test_selenium.py:68 teardown_module():每个模块（文件）之后执行

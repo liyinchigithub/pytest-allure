@@ -1,4 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Tue Mar 15 23:19:54 CST 2022","Tue Mar 15 23:20:07 CST 2022","13528","src.package.module","test_selenium","Test_01","","","test_baidu_search[http://www.baidu.com-百度搜索]","描述用例信息"
-"passed","Tue Mar 15 23:20:07 CST 2022","Tue Mar 15 23:20:20 CST 2022","12264","src.package.module","test_selenium","Test_01","","","test_baidu_search[http://www.bing.com-必应搜索]","描述用例信息"
-"skipped","Tue Mar 15 23:20:20 CST 2022","Tue Mar 15 23:20:20 CST 2022","1","src.package.module","test_selenium","Test_01","","","test_bing_search",""
+"passed","Wed Mar 16 20:59:08 CST 2022","Wed Mar 16 20:59:12 CST 2022","3858","src.package.module","test_selenium","Test_01","","","test_bing_search",""
+"passed","Wed Mar 16 20:58:52 CST 2022","Wed Mar 16 20:59:08 CST 2022","15349","src.package.module","test_selenium","Test_01","","","test_baidu_search[http://www.bing.com-必应搜索]","描述用例信息"
+"passed","Wed Mar 16 20:58:37 CST 2022","Wed Mar 16 20:58:52 CST 2022","15713","src.package.module","test_selenium","Test_01","","","test_baidu_search[http://www.baidu.com-百度搜索]","描述用例信息"

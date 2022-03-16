@@ -1,5 +1,5 @@
 {
-  "uid" : "d2339b86f8b934d7",
+  "uid" : "2f9568d5e3d7fa7a",
   "name" : "test_bing_search",
   "fullName" : "src.package.module.test_selenium.Test_01#test_bing_search",
   "historyId" : "1bee99ca5e6e5c6fd194fa2514c06a62",
@@ -39,9 +39,9 @@
     "statusTrace" : "('/Users/liyinchi/workspace/python/python-allure/src/package/module/test_selenium.py', 144, 'Skipped: unconditional skip')",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "5344767960c5483c",
+      "uid" : "70e543b01ea9d9d0",
       "name" : "log",
-      "source" : "5344767960c5483c.txt",
+      "source" : "70e543b01ea9d9d0.txt",
       "type" : "text/plain",
       "size" : 105
     } ],
@@ -106,14 +106,12 @@
   } ],
   "parameters" : [ ],
   "links" : [ ],
-  "hidden" : false,
-  "retry" : false,
+  "hidden" : true,
+  "retry" : true,
   "extra" : {
-    "severity" : "normal",
-    "retries" : [ ],
     "categories" : [ ],
     "tags" : [ "@pytest.mark.skip", "smoke" ]
   },
-  "source" : "d2339b86f8b934d7.json",
+  "source" : "2f9568d5e3d7fa7a.json",
   "parameterValues" : [ ]
 }

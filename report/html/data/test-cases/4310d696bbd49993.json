@@ -1,12 +1,12 @@
 {
-  "uid" : "241a74638d3184e9",
-  "name" : "test_baidu_search[http://www.baidu.com-百度搜索]",
+  "uid" : "4310d696bbd49993",
+  "name" : "test_baidu_search[http://www.bing.com-必应搜索]",
   "fullName" : "src.package.module.test_selenium.Test_01#test_baidu_search",
-  "historyId" : "1a35b925886a4496ca2e9b404ccf287e",
+  "historyId" : "d8220c1be37ee5bf8862f9fbf89cc2d8",
   "time" : {
-    "start" : 1647357594214,
-    "stop" : 1647357607742,
-    "duration" : 13528
+    "start" : 1647357607747,
+    "stop" : 1647357620011,
+    "duration" : 12264
   },
   "description" : "描述用例信息",
   "descriptionHtml" : "<p>描述用例信息</p>\n",
@@ -23,11 +23,11 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "b837e9706cd66c21",
+      "uid" : "48fbb9bc68a9aa90",
       "name" : "log",
-      "source" : "b837e9706cd66c21.txt",
+      "source" : "48fbb9bc68a9aa90.txt",
       "type" : "text/plain",
-      "size" : 530
+      "size" : 426
     } ],
     "parameters" : [ ],
     "stepsCount" : 0,
@@ -81,20 +81,18 @@
   } ],
   "parameters" : [ {
     "name" : "search_text",
-    "value" : "'百度搜索'"
+    "value" : "'必应搜索'"
   }, {
     "name" : "url",
-    "value" : "'http://www.baidu.com'"
+    "value" : "'http://www.bing.com'"
   } ],
   "links" : [ ],
-  "hidden" : false,
-  "retry" : false,
+  "hidden" : true,
+  "retry" : true,
   "extra" : {
-    "severity" : "trivial",
-    "retries" : [ ],
     "categories" : [ ],
     "tags" : [ "test", "L1" ]
   },
-  "source" : "241a74638d3184e9.json",
-  "parameterValues" : [ "'百度搜索'", "'http://www.baidu.com'" ]
+  "source" : "4310d696bbd49993.json",
+  "parameterValues" : [ "'必应搜索'", "'http://www.bing.com'" ]
 }

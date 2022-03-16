@@ -1,31 +1,31 @@
 [ {
-  "uid" : "241a74638d3184e9",
-  "name" : "test_baidu_search[http://www.baidu.com-百度搜索]",
-  "time" : {
-    "start" : 1647357594214,
-    "stop" : 1647357607742,
-    "duration" : 13528
-  },
-  "status" : "passed",
-  "severity" : "trivial"
-}, {
-  "uid" : "b016a127bef1ee98",
-  "name" : "test_baidu_search[http://www.bing.com-必应搜索]",
-  "time" : {
-    "start" : 1647357607747,
-    "stop" : 1647357620011,
-    "duration" : 12264
-  },
-  "status" : "passed",
-  "severity" : "trivial"
-}, {
-  "uid" : "d2339b86f8b934d7",
+  "uid" : "34702196d92d75c1",
   "name" : "test_bing_search",
   "time" : {
-    "start" : 1647357620014,
-    "stop" : 1647357620015,
-    "duration" : 1
+    "start" : 1647435548262,
+    "stop" : 1647435552120,
+    "duration" : 3858
   },
-  "status" : "skipped",
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7c4014cafad4f03d",
+  "name" : "test_baidu_search[http://www.bing.com-必应搜索]",
+  "time" : {
+    "start" : 1647435532908,
+    "stop" : 1647435548257,
+    "duration" : 15349
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ac48a59f44a4dd71",
+  "name" : "test_baidu_search[http://www.baidu.com-百度搜索]",
+  "time" : {
+    "start" : 1647435517188,
+    "stop" : 1647435532901,
+    "duration" : 15713
+  },
+  "status" : "passed",
   "severity" : "normal"
 } ]

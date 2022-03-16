@@ -1,12 +1,12 @@
 {
-  "uid" : "b016a127bef1ee98",
+  "uid" : "7c4014cafad4f03d",
   "name" : "test_baidu_search[http://www.bing.com-必应搜索]",
   "fullName" : "src.package.module.test_selenium.Test_01#test_baidu_search",
   "historyId" : "d8220c1be37ee5bf8862f9fbf89cc2d8",
   "time" : {
-    "start" : 1647357607747,
-    "stop" : 1647357620011,
-    "duration" : 12264
+    "start" : 1647435532908,
+    "stop" : 1647435548257,
+    "duration" : 15349
   },
   "description" : "描述用例信息",
   "descriptionHtml" : "<p>描述用例信息</p>\n",
@@ -15,7 +15,7 @@
   "newFailed" : false,
   "newBroken" : false,
   "newPassed" : false,
-  "retriesCount" : 0,
+  "retriesCount" : 1,
   "retriesStatusChange" : false,
   "beforeStages" : [ ],
   "testStage" : {
@@ -23,9 +23,9 @@
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "4c3ecd4ec2a75897",
+      "uid" : "774cfc7456d87e92",
       "name" : "log",
-      "source" : "4c3ecd4ec2a75897.txt",
+      "source" : "774cfc7456d87e92.txt",
       "type" : "text/plain",
       "size" : 426
     } ],
@@ -37,14 +37,14 @@
   },
   "afterStages" : [ ],
   "labels" : [ {
-    "name" : "story",
-    "value" : "测试用例1-1"
-  }, {
     "name" : "feature",
     "value" : "测试场景1"
   }, {
+    "name" : "story",
+    "value" : "测试用例1-1"
+  }, {
     "name" : "severity",
-    "value" : "trivial"
+    "value" : " blocker"
   }, {
     "name" : "tag",
     "value" : "L1"
@@ -65,7 +65,7 @@
     "value" : "liyinchideMacBook-Pro.local"
   }, {
     "name" : "thread",
-    "value" : "16520-MainThread"
+    "value" : "48438-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -90,11 +90,19 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "trivial",
-    "retries" : [ ],
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "4310d696bbd49993",
+      "status" : "passed",
+      "time" : {
+        "start" : 1647357607747,
+        "stop" : 1647357620011,
+        "duration" : 12264
+      }
+    } ],
     "categories" : [ ],
     "tags" : [ "test", "L1" ]
   },
-  "source" : "b016a127bef1ee98.json",
+  "source" : "7c4014cafad4f03d.json",
   "parameterValues" : [ "'必应搜索'", "'http://www.bing.com'" ]
 }

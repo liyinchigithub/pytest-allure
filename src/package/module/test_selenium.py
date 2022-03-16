@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 # selenium
@@ -104,7 +103,7 @@ def setup_method():
 def teardown_method():
     logger.info("teardown_method():类中的方法，每个方法之后执行")
 
-@allure.feature("测试场景1")
+@allure.feature("测试场景1")# # [标记主要功能]
 class Test_01():
     '''
         DDT 数据驱动（参数化）
@@ -114,16 +113,16 @@ class Test_01():
     @pytest.mark.parametrize("url,search_text", data)
     @pytest.mark.L1
     @pytest.mark.test
-    @allure.story("测试用例1-1")# 标记测试用例
-    @allure.severity("trivial")# 标记测试用例等级
+    @allure.story("测试用例1-1")# [标注Feature功能模块下的分支功能]
+    @allure.severity(" blocker")# [标记测试用例等级] blocker级别：中断缺陷（客户端程序无响应，无法执行下一步操作）;critical级别：临界缺陷（功能点缺失）;normal级别：正常 默认为这个级别;minor级别：次要缺陷（界面错误与UI需求不符）;trivial级别：轻微缺陷（必输项无提示，或者提示不规范） 
     @allure.description("描述用例信息")
     def test_baidu_search(self, url, search_text):
-        driver.maximize_window()
-        driver.get(url)
+        driver.maximize_window()# 窗口最大化
+        driver.get(url) #打开网页
         try:
             if("baidu" in url):
-                driver.find_element_by_id("kw").send_keys(search_text)
-                driver.find_element_by_id('su').click()
+                driver.find_element_by_id("kw").send_keys(search_text)# 输入
+                driver.find_element_by_id('su').click()# 点击
             elif("bing" in url):
                 driver.find_element_by_id("sb_form_q").send_keys("python")
                 driver.find_element_by_id('search_icon').click()
@@ -141,8 +140,11 @@ class Test_01():
     '''
         跳过的测试用例c
     '''
-    @pytest.mark.skip
+    # @pytest.mark.skip
     @pytest.mark.smoke
+    @allure.step("这是一个步骤")# [标注测试用例的重要步骤]
+    @allure.testcase("https://home.cnblogs.com/","测试用例地址请点击跳转")     #标记代码，你可以指定连接的名字，报告里面就会现在这个名字的连接
+    @allure.issue("http://www.baidu.com") #标记代码，哪个写在后，在报告里面就会显示在前面
     def test_bing_search(self):
        try:
             driver.maximize_window()
@@ -171,3 +173,15 @@ class Test_01():
             logger.info('保存失败')
 if __name__ == '__main__':
     pytest.main(['-s','-q','--alluredir','./report/'])
+    
+    '''
+    [参数说明]
+    "-m": 标记用例
+    "login": 被标记需要执行用例
+    "-s":允许终端在测试运行时输出某些结果，例如你想输入print的内容，可以加上-s
+    "-q":简化输出结果
+    "--alluredir": 生成allure指定语法
+    "./report":生成报告的路径
+    "--clean-alluredir":因为这个插件库allure-pytest生成的报告文件，你第二次运行时候不会清理掉里面的东西，所以你需要删除这个report文件夹，然后运行重新新建reoprt文件夹
+    说明:运行后，会在report文件夹里面生成文件
+    '''

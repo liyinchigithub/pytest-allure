@@ -1,0 +1,174 @@
+{
+  "uid" : "34702196d92d75c1",
+  "name" : "test_bing_search",
+  "fullName" : "src.package.module.test_selenium.Test_01#test_bing_search",
+  "historyId" : "1bee99ca5e6e5c6fd194fa2514c06a62",
+  "time" : {
+    "start" : 1647435548262,
+    "stop" : 1647435552120,
+    "duration" : 3858
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 1,
+  "retriesStatusChange" : true,
+  "beforeStages" : [ {
+    "name" : "xunit_setup_module_fixture_package.module.test_selenium",
+    "time" : {
+      "start" : 1647435517177,
+      "stop" : 1647435517183,
+      "duration" : 6
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "xunit_setup_function_fixture_package.module.test_selenium",
+    "time" : {
+      "start" : 1647435548261,
+      "stop" : 1647435548261,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "这是一个步骤",
+      "time" : {
+        "start" : 1647435548262,
+        "stop" : 1647435552120,
+        "duration" : 3858
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "1c0b3ec1b971c2b7",
+      "name" : "log",
+      "source" : "1c0b3ec1b971c2b7.txt",
+      "type" : "text/plain",
+      "size" : 300
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "xunit_setup_function_fixture_package.module.test_selenium::0",
+    "time" : {
+      "start" : 1647435552120,
+      "stop" : 1647435552120,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "xunit_setup_module_fixture_package.module.test_selenium::0",
+    "time" : {
+      "start" : 1647435552121,
+      "stop" : 1647435552363,
+      "duration" : 242
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "测试场景1"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "parentSuite",
+    "value" : "src.package.module"
+  }, {
+    "name" : "suite",
+    "value" : "test_selenium"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_01"
+  }, {
+    "name" : "host",
+    "value" : "liyinchideMacBook-Pro.local"
+  }, {
+    "name" : "thread",
+    "value" : "48438-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "src.package.module.test_selenium"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ {
+    "name" : "http://www.baidu.com",
+    "url" : "http://www.baidu.com",
+    "type" : "issue"
+  }, {
+    "name" : "测试用例地址请点击跳转",
+    "url" : "https://home.cnblogs.com/",
+    "type" : "test_case"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2f9568d5e3d7fa7a",
+      "status" : "skipped",
+      "statusDetails" : "Skipped: unconditional skip",
+      "time" : {
+        "start" : 1647357620014,
+        "stop" : 1647357620015,
+        "duration" : 1
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ "smoke" ]
+  },
+  "source" : "34702196d92d75c1.json",
+  "parameterValues" : [ ]
+}
