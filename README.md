@@ -132,9 +132,25 @@ allure open report/html
 ```
 <img width="805" alt="image" src="https://user-images.githubusercontent.com/19643260/158414903-ca505fb5-1701-45f7-8fd7-b1ba5e7b8c8e.png">
 
+### 标记
+
+* Feature: 标注主要功能模块
+* Story: 标注Features功能模块下的分支功能
+* Severity: 标注测试用例的重要级别
+* Step: 标注测试用例的重要步骤
+* Issue 和TestCase: 标注Issue、Case，可加入URL
+
+severity标注测试用例的重要级别：
+* 1）blocker级别：中断缺陷（客户端程序无响应，无法执行下一步操作）
+* 2）critical级别：临界缺陷（功能点缺失）
+* 3）normal级别：正常    默认为这个级别
+* 4）minor级别：次要缺陷（界面错误与UI需求不符）
+* 5）trivial级别：轻微缺陷（必输项无提示，或者提示不规范） 
+
+<img width="1433" alt="image" src="https://user-images.githubusercontent.com/19643260/158599647-099770a0-b07b-4ad8-bc60-b9960cd33f72.png">
+
 
 ## 参考
 
 1. [selenium chrome options参数设置](https://note.youdao.com/s/ER8jfnYo)
-2. [csdn 博文](https://www.cnblogs.com/guapitomjoy/p/12150416.html)
-3. [csdn 博文](https://www.cnblogs.com/clement-jiao/p/10889234.html)
+2. [allure](https://github.com/allure-framework/allure2/releases)
