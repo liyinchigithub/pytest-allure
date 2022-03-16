@@ -144,17 +144,20 @@ class Test_01():
     @pytest.mark.skip
     @pytest.mark.smoke
     def test_bing_search(self):
-        driver.maximize_window()
-        url = "http://www.bing.com"
-        driver.get(url)
-        driver.find_element_by_id("sb_form_q").send_keys("python")
-        driver.find_element_by_id('search_icon').click()
-        time.sleep(2)
-        # 截图-输出控制台
-        file = driver.get_screenshot_as_png
-        logger.info(file)
-        # 截图-保存本地
-        self.save_screenshot()
+       try:
+            driver.maximize_window()
+            url = "http://www.bing.com"
+            driver.get(url)
+            driver.find_element_by_id("sb_form_q").send_keys("python")
+            driver.find_element_by_id('search_icon').click()
+            time.sleep(2)
+            # 截图-输出控制台
+            file = driver.get_screenshot_as_png
+            logger.info(file)
+       except Exception as e:
+            logger.error("报错：{}".format(e))
+            # 截图-保存本地
+            self.save_screenshot()
 
     '''
         selenium 截图保存本地
